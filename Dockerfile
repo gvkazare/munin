@@ -24,8 +24,8 @@ RUN \
 	mkdir /var/run/munin  && \
 	chown munin:munin /var/run/munin
 
-ADD start.sh /
-RUN chmod 777 /start.sh /
+ADD start.sh
+RUN chmod 777 /start.sh
 ADD payload/apache24.conf /etc/munin/
 ADD payload/main.cf /etc/postfix/
 
