@@ -10,7 +10,7 @@ ENV ALLOWED_HOSTS="127.0.0.1/32" \
 
 RUN \
 	apt-get update && apt-get -y upgrade && \
-	DEBIAN_FRONTEND=noninteractive apt-get install -y munin apache2 lm-sensors postfix mailutils tzdata nano && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y munin apache2 lm-sensors postfix mailutils tzdata nano telnet && \
 	apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* && \
 	sed -ri 's/^log_file.*/# \0/; \
 			s/^pid_file.*/# \0/; \
